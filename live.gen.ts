@@ -201,8 +201,10 @@ const manifest = {
     "deco-sites/focus-store/sections/Images/ShoppableBanner.tsx": $$$$$$$$4,
     "deco-sites/focus-store/sections/Links/LinkTree.tsx": $$$$$$$$20,
     "deco-sites/focus-store/sections/Links/Shortcuts.tsx": $$$$$$$$21,
-    "deco-sites/focus-store/sections/Miscellaneous/CampaignTimer.tsx": $$$$$$$$16,
-    "deco-sites/focus-store/sections/Miscellaneous/CookieConsent.tsx": $$$$$$$$17,
+    "deco-sites/focus-store/sections/Miscellaneous/CampaignTimer.tsx":
+      $$$$$$$$16,
+    "deco-sites/focus-store/sections/Miscellaneous/CookieConsent.tsx":
+      $$$$$$$$17,
     "deco-sites/focus-store/sections/Newsletter/Newsletter.tsx": $$$$$$$$22,
     "deco-sites/focus-store/sections/Product/ProductDetails.tsx": $$$$$$$$15,
     "deco-sites/focus-store/sections/Product/ProductShelf.tsx": $$$$$$$$14,

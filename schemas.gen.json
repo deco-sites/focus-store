@@ -8210,7 +8210,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0vRGVzaWduU3lzdGVtLnRzeA==@Colors&bd89f381e0f8b6bef137442257131439": {
+    "ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0vRGVzaWduU3lzdGVtLnRzeA==@8f69e463f92d0adf557fb9de67a89eb4&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0vRGVzaWduU3lzdGVtLnRzeA==@Colors"
@@ -8226,7 +8226,7 @@
           "required": []
         }
       ],
-      "title": "Colors&bd89f381e0f8b6bef137442257131439"
+      "title": "8f69e463f92d0adf557fb9de67a89eb4&Colors"
     },
     "ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0vRGVzaWduU3lzdGVtLnRzeA==@Miscellaneous": {
       "type": "object",
@@ -8329,7 +8329,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0vRGVzaWduU3lzdGVtLnRzeA==@Colors&bd89f381e0f8b6bef137442257131439",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0vRGVzaWduU3lzdGVtLnRzeA==@8f69e463f92d0adf557fb9de67a89eb4&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -10552,6 +10552,14 @@
             "null"
           ],
           "title": "Canonical URL"
+        },
+        "noIndexNoFollow": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Disable indexing",
+          "description": "In testing, you can use this to prevent search engines from indexing your site"
         },
         "context": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null|ProductListingPage|null",

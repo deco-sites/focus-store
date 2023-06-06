@@ -14,6 +14,10 @@ export interface Props {
 function Alert({ alerts = [], interval = 5 }: Props) {
   const id = useId();
 
+  if (!alerts.length) {
+    return <div class="hidden" />;
+  }
+
   return (
     <div id={id}>
       <Slider class="carousel carousel-center bg-secondary gap-6 scrollbar-none">

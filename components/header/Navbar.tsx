@@ -38,24 +38,25 @@ function Navbar({ items, searchbar }: {
       <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
         <div class="flex-none w-44">
           <a href="/" aria-label="Store logo" class="block px-4 py-3 w-[160px]">
-            <Icon id="Logo" width={126} height={16} />
+            <Icon id="Logo" width={135} height={62} />
           </a>
         </div>
-        <div class="flex-auto flex justify-center">
+        <div class="flex flex-grow-1 justify-center">
           {items.map((item) => <NavItem item={item} />)}
         </div>
-        <div class="flex-none w-44 flex items-center justify-end gap-2">
+        <div class="flex-grow-1 flex items-center justify-end gap-2">
           <Buttons variant="search" />
           <Searchbar searchbar={searchbar} />
           <a
-            class="btn btn-circle btn-sm btn-ghost"
+            class="btn btn-sm btn-ghost"
             href="/login"
             aria-label="Log in"
           >
             <Icon id="User" width={20} height={20} strokeWidth={0.4} />
+            Minha conta
           </a>
           <a
-            class="btn btn-circle btn-sm btn-ghost"
+            class="btn btn-sm btn-ghost"
             href="/wishlist"
             aria-label="Wishlist"
           >
@@ -65,6 +66,7 @@ function Navbar({ items, searchbar }: {
               strokeWidth={2}
               fill="none"
             />
+            Favoritos
           </a>
           <Buttons variant="cart" />
         </div>

@@ -10,13 +10,14 @@ function SearchButton() {
 
   return (
     <Button
-      class="btn btn-circle btn-sm btn-ghost"
+      class="btn btn-sm btn-ghost"
       aria-label="search icon button"
       onClick={() => {
         displaySearchbar.value = !displaySearchbar.peek();
       }}
     >
       <Icon id="MagnifyingGlass" width={20} height={20} strokeWidth={0.1} />
+      Buscar
     </Button>
   );
 }
@@ -26,7 +27,7 @@ function MenuButton() {
 
   return (
     <Button
-      class="btn btn-circle btn-sm btn-ghost"
+      class="btn btn-sm btn-ghost"
       aria-label="open menu"
       onClick={() => {
         displayMenu.value = true;
@@ -64,22 +65,21 @@ function CartButton() {
 
   return (
     <Button
-      class="btn btn-circle btn-sm btn-ghost relative"
+      class="btn btn-sm btn-ghost relative"
       aria-label="open cart"
       data-deco={displayCart.value && "open-cart"}
       loading={loading.value}
       onClick={onClick}
     >
-      <div class="indicator">
-        {totalItems && (
-          <span class="indicator-item badge badge-secondary badge-sm">
-            {totalItems > 9 ? "9+" : totalItems}
-          </span>
-        )}
-        {!loading.value && (
-          <Icon id="ShoppingCart" width={20} height={20} strokeWidth={2} />
-        )}
-      </div>
+      {totalItems && (
+        <span class="indicator-item badge badge-secondary badge-sm">
+          {totalItems > 9 ? "9+" : totalItems}
+        </span>
+      )}
+      {!loading.value && (
+        <Icon id="ShoppingCart" width={20} height={20} strokeWidth={2} />
+      )}
+      Sacola
     </Button>
   );
 }
