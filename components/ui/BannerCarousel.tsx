@@ -148,7 +148,7 @@ function Buttons() {
   );
 }
 
-function BannerCarousel({ images, preload, interval }: Props) {
+function BannerCarousel({ images = [], preload, interval }: Props) {
   const id = useId();
 
   return (
@@ -164,9 +164,14 @@ function BannerCarousel({ images, preload, interval }: Props) {
         ))}
       </Slider>
 
-      <Buttons />
-
-      <Dots images={images} interval={interval} />
+      {images?.length > 1
+        ? (
+          <>
+            <Buttons />
+            <Dots images={images} interval={interval} />
+          </>
+        )
+        : null}
 
       <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
     </div>
