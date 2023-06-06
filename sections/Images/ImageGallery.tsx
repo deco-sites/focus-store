@@ -135,7 +135,7 @@ function Banner(
   return (
     <a
       href={props.href}
-      class={`overflow-hidden ${radiusDesktop} ${radiusMobile}`}
+      class={`overflow-hidden block ${radiusDesktop} ${radiusMobile}`}
     >
       <Picture>
         <Source
