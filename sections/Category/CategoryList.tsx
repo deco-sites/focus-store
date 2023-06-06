@@ -24,7 +24,7 @@ export interface Props {
   layout?: {
     headerAlignment?: "center" | "left";
     /** @default normal */
-    size: 'normal' | "auto";
+    size: "normal" | "auto";
     categoryCard?: {
       textPosition?: "top" | "bottom";
       textAlignment?: "center" | "left";
