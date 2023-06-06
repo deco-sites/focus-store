@@ -54,7 +54,9 @@ export default function ShoppableBanner(props: Props) {
           <h2 class="card-title">{title}</h2>
           <div>{text}</div>
           <div class="card-actions">
-            <a class="btn btn-outline rounded-none" href={link?.href}>{link?.text}</a>
+            <a class="btn btn-outline rounded-none" href={link?.href}>
+              {link?.text}
+            </a>
           </div>
         </div>
         <figure class="relative">
