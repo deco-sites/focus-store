@@ -48,7 +48,7 @@ export default function ShoppableBanner(props: Props) {
   const { link, text, title, image, pins } = { ...DEFAULT_PROPS, ...props };
 
   return (
-    <div class="container">
+    <div class="container mv-6">
       <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-[50%_50%]">
         <div class="card-body">
           <h2 class="card-title">{title}</h2>
