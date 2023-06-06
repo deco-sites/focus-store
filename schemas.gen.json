@@ -7382,6 +7382,20 @@
               "type": "string",
               "title": "Header Alignment"
             },
+            "size": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "const": "normal"
+                },
+                {
+                  "type": "string",
+                  "const": "auto"
+                }
+              ],
+              "type": "string",
+              "title": "Size"
+            },
             "categoryCard": {
               "type": "object",
               "properties": {
@@ -7418,7 +7432,9 @@
               "title": "Category Card"
             }
           },
-          "required": [],
+          "required": [
+            "size"
+          ],
           "title": "Layout"
         }
       },

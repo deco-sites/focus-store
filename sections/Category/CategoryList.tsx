@@ -23,6 +23,8 @@ export interface Props {
   list?: Category[];
   layout?: {
     headerAlignment?: "center" | "left";
+    /** @default normal */
+    size: 'normal' | "auto";
     categoryCard?: {
       textPosition?: "top" | "bottom";
       textAlignment?: "center" | "left";
@@ -72,6 +74,7 @@ function CategoryList(props: Props) {
     ],
     layout = {
       headerAlignment: "center",
+      size: "normal",
       categoryCard: {
         textPosition: "top",
         textAlignment: "center",
@@ -137,11 +140,13 @@ function CategoryList(props: Props) {
                 (
                   <figure>
                     <Image
-                      class="card w-[72px] h-auto"
+                      class={`card ${
+                        layout.size === "auto" ? "" : "w-[72px]"
+                      } h-auto`}
                       src={image}
                       alt={description || label || tag}
-                      width={160}
-                      height={195}
+                      width={200}
+                      height={200}
                       loading="lazy"
                     />
                   </figure>
