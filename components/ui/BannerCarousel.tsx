@@ -50,7 +50,7 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     <a
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative h-[600px] overflow-y-hidden w-full"
+      class="relative h-auto overflow-y-hidden w-full"
     >
       <Picture preload={lcp}>
         <Source
@@ -58,24 +58,24 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
           width={360}
-          height={600}
+          height={550}
         />
         <Source
           media="(min-width: 768px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
-          width={1440}
-          height={600}
+          width={1920}
+          height={550}
         />
         <img
-          class="object-cover w-full h-full"
+          class="object-contain w-full h-full"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
         />
       </Picture>
       {action && (
-        <div class="hiddent absolute top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 p-4 rounded glass">
+        <div class="hidden absolute top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 p-4 rounded glass">
           <span class="text-6xl font-medium text-base-100">
             {action.title}
           </span>
