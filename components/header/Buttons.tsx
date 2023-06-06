@@ -17,7 +17,9 @@ function SearchButton() {
       }}
     >
       <Icon id="MagnifyingGlass" width={20} height={20} strokeWidth={0.1} />
-      Buscar
+      <span class="hidden md:inline-block">
+        Buscar
+      </span>
     </Button>
   );
 }
@@ -79,7 +81,7 @@ function CartButton() {
       {!loading.value && (
         <Icon id="ShoppingCart" width={20} height={20} strokeWidth={2} />
       )}
-      Sacola
+      <span class="hidden md:inline-block">Sacola</span>
     </Button>
   );
 }

@@ -13,22 +13,18 @@ function Navbar({ items, searchbar }: {
   return (
     <>
       {/* Mobile Version */}
-      <div
-        style={{ height: navbarHeight }}
-        class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 gap-2"
-      >
-        <Buttons variant="menu" />
-
+      <div class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full px-3 gap-2">
+        <div class="w-1/5">
+          <Buttons variant="menu" />
+        </div>
         <a
           href="/"
-          class="flex-grow inline-flex items-center"
-          style={{ minHeight: navbarHeight }}
+          class="w-3/5 inline-flex justify-center items-center py-2"
           aria-label="Store logo"
         >
-          <Icon id="Logo" width={126} height={16} />
+          <Icon id="Logo" width={135} height={62} />
         </a>
-
-        <div class="flex gap-1">
+        <div class="flex w-1/5 gap-1 justify-end">
           <Buttons variant="search" />
           <Buttons variant="cart" />
         </div>
