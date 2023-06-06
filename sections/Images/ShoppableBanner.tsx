@@ -49,7 +49,14 @@ export default function ShoppableBanner(props: Props) {
 
   return (
     <div class="container">
-      <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-[70%_30%]">
+      <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-[50%_50%]">
+        <div class="card-body">
+          <h2 class="card-title">{title}</h2>
+          <div>{text}</div>
+          <div class="card-actions">
+            <a class="btn btn-outline rounded-none" href={link?.href}>{link?.text}</a>
+          </div>
+        </div>
         <figure class="relative">
           <Picture>
             <Source
@@ -98,13 +105,6 @@ export default function ShoppableBanner(props: Props) {
             </>
           ))}
         </figure>
-        <div class="card-body">
-          <h2 class="card-title">{title}</h2>
-          <p>{text}</p>
-          <div class="card-actions justify-end">
-            <a class="btn btn-primary" href={link?.href}>{link?.text}</a>
-          </div>
-        </div>
       </div>
     </div>
   );
