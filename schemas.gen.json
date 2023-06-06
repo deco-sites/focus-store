@@ -9303,6 +9303,21 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9JbWFnZXMvU2hvcHBhYmxlQmFubmVyLnRzeA==@Pin[]",
           "title": "Pins"
         },
+        "imageSide": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "right"
+            },
+            {
+              "type": "string",
+              "const": "left"
+            }
+          ],
+          "type": "string",
+          "default": "right",
+          "title": "Image Side"
+        },
         "text": {
           "type": [
             "string",
@@ -9338,7 +9353,8 @@
       },
       "required": [
         "image",
-        "pins"
+        "pins",
+        "imageSide"
       ],
       "title": "deco-sites/focus-store/sections/Images/ShoppableBanner.tsx@Props"
     },

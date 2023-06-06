@@ -9,7 +9,8 @@ export interface Props {
   };
 
   pins: Pin[];
-
+  /** @default right */
+  imageSide: "right" | "left";
   text?: string;
   title?: string;
   link?: {
@@ -37,6 +38,7 @@ const DEFAULT_PROPS: Props = {
     text: "Ver agora",
   },
   pins: [],
+  imageSide: "right",
   image: {
     mobile:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/aa071a4a-fd37-4efa-abf1-f736af0409a3",
@@ -45,20 +47,27 @@ const DEFAULT_PROPS: Props = {
 };
 
 export default function ShoppableBanner(props: Props) {
-  const { link, text, title, image, pins } = { ...DEFAULT_PROPS, ...props };
+  const { link, text, title, image, pins, imageSide } = {
+    ...DEFAULT_PROPS,
+    ...props,
+  };
 
   return (
-    <div class="container mv-6">
+    <div class="container my-6">
       <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-[50%_50%]">
-        <div class="card-body">
-          <h2 class="card-title">{title}</h2>
-          <div>{text}</div>
-          <div class="card-actions">
-            <a class="btn btn-outline rounded-none" href={link?.href}>
-              {link?.text}
-            </a>
-          </div>
-        </div>
+        {imageSide === "right"
+          ? (
+            <div class="card-body">
+              <h2 class="card-title">{title}</h2>
+              <div>{text}</div>
+              <div class="card-actions">
+                <a class="btn btn-outline rounded-none" href={link?.href}>
+                  {link?.text}
+                </a>
+              </div>
+            </div>
+          )
+          : null}
         <figure class="relative">
           <Picture>
             <Source
@@ -107,6 +116,19 @@ export default function ShoppableBanner(props: Props) {
             </>
           ))}
         </figure>
+        {imageSide === "left"
+          ? (
+            <div class="card-body">
+              <h2 class="card-title">{title}</h2>
+              <div>{text}</div>
+              <div class="card-actions">
+                <a class="btn btn-outline rounded-none" href={link?.href}>
+                  {link?.text}
+                </a>
+              </div>
+            </div>
+          )
+          : null}
       </div>
     </div>
   );
