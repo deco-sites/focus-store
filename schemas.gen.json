@@ -86,6 +86,7 @@
               "deco-sites/focus-store/sections/Category/CategoryList.tsx",
               "deco-sites/focus-store/sections/Content/Benefits.tsx",
               "deco-sites/focus-store/sections/Content/Faq.tsx",
+              "deco-sites/focus-store/sections/Content/InfoCard.tsx",
               "deco-sites/focus-store/sections/Content/Logos.tsx",
               "deco-sites/focus-store/sections/Content/Testimonials.tsx",
               "deco-sites/focus-store/sections/DesignSystem/DesignSystem.tsx",
@@ -7811,6 +7812,72 @@
       "required": [],
       "title": "deco-sites/focus-store/sections/Content/Faq.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9Db250ZW50L0luZm9DYXJkLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "fontSize": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "Normal"
+            },
+            {
+              "type": "string",
+              "const": "Large"
+            }
+          ],
+          "type": "string",
+          "title": "Font Size"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Description"
+        },
+        "paragraph": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "html",
+          "title": "Paragraph"
+        },
+        "alignment": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "center"
+            },
+            {
+              "type": "string",
+              "const": "left"
+            }
+          ],
+          "type": "string",
+          "title": "Alignment"
+        },
+        "colorReverse": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Color Reverse"
+        }
+      },
+      "required": [
+        "alignment"
+      ],
+      "title": "deco-sites/focus-store/sections/Content/InfoCard.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9Db250ZW50L0xvZ29zLnRzeA==@Image": {
       "type": "object",
       "properties": {
@@ -12975,6 +13042,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9Db250ZW50L0luZm9DYXJkLnRzeA==": {
+      "title": "deco-sites/focus-store/sections/Content/InfoCard.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9Db250ZW50L0luZm9DYXJkLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/focus-store/sections/Content/InfoCard.tsx"
+          ],
+          "default": "deco-sites/focus-store/sections/Content/InfoCard.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9Db250ZW50L0xvZ29zLnRzeA==": {
       "title": "deco-sites/focus-store/sections/Content/Logos.tsx",
       "type": "object",
@@ -14561,6 +14649,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9Db250ZW50L0ZhcS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9Db250ZW50L0luZm9DYXJkLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9mb2N1cy1zdG9yZS9zZWN0aW9ucy9Db250ZW50L0xvZ29zLnRzeA=="

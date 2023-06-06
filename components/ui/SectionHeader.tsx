@@ -2,6 +2,7 @@ interface Props {
   title?: string;
   fontSize?: "Normal" | "Large";
   description?: string;
+  paragraph?: string;
   alignment: "center" | "left";
   colorReverse?: boolean;
 }
@@ -44,6 +45,19 @@ function Header(props: Props) {
                 >
                   {props.description}
                 </h2>
+              )}
+            {props.paragraph &&
+              (
+                <div
+                  class={`
+                  leading-6 lg:leading-8 px-6
+                  ${
+                    props.colorReverse ? "text-primary-content" : "text-neutral"
+                  }
+                  ${props.fontSize === "Normal" ? "lg:text-xl" : "lg:text-2xl"}
+                `}
+                  dangerouslySetInnerHTML={{ __html: props.paragraph }}
+                />
               )}
           </div>
         )
