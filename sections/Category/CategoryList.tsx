@@ -45,7 +45,8 @@ function CardText(
       }`}
     >
       {tag && <div class="text-sm text-primary">{tag}</div>}
-      {label && <h3 class="text-lg text-base-content">{label}</h3>}
+      {label && <h3 class="text-xs font-semibold text-base-content">{label}
+      </h3>}
       {description && <div class="text-sm text-neutral">{description}</div>}
     </div>
   );
@@ -81,14 +82,35 @@ function CategoryList(props: Props) {
   return (
     <div
       id={id}
-      class="container py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10"
+      class="container relative py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10"
     >
       <Header
         title={header.title}
         description={header.description || ""}
         alignment={layout.headerAlignment || "center"}
       />
-
+      <div class="absolute w-full top-1/2 left-0">
+        <div class="absolute left-0 flex items-center justify-center z-10 col-start-1 row-start-2">
+          <Slider.PrevButton class="btn btn-circle">
+            <Icon
+              class="text-base-100"
+              size={20}
+              id="ChevronLeft"
+              strokeWidth={3}
+            />
+          </Slider.PrevButton>
+        </div>
+        <div class="absolute right-0 flex items-center justify-center z-10 col-start-3 row-start-2">
+          <Slider.NextButton class="btn btn-circle">
+            <Icon
+              class="text-base-100"
+              size={20}
+              id="ChevronRight"
+              strokeWidth={3}
+            />
+          </Slider.NextButton>
+        </div>
+      </div>
       <Slider class="carousel carousel-start gap-4 lg:gap-8 row-start-2 row-end-5">
         {list.map((
           { tag, label, description, href, image, buttonText },
@@ -100,7 +122,7 @@ function CategoryList(props: Props) {
           >
             <a
               href={href}
-              class="flex flex-col gap-4 lg:w-[280px] w-40 lg:h-auto"
+              class="flex flex-col gap-4 items-center w-60"
             >
               {layout.categoryCard?.textPosition === "top" &&
                 (
@@ -115,7 +137,7 @@ function CategoryList(props: Props) {
                 (
                   <figure>
                     <Image
-                      class="card w-full"
+                      class="card w-[72px] h-auto"
                       src={image}
                       alt={description || label || tag}
                       width={160}

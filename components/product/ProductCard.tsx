@@ -98,9 +98,9 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
     <a
       href={url && relative(url)}
       aria-label="view product"
-      class="btn btn-block"
+      class="btn btn-block bg-[#34a55b] text-white"
     >
-      {l?.basics?.ctaText || "Ver produto"}
+      {l?.basics?.ctaText || "Comprar"}
     </a>
   );
 
@@ -248,7 +248,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
               >
                 {formatPrice(listPrice, offers!.priceCurrency!)}
               </div>
-              <div class="text-accent text-base lg:text-xl">
+              <div class="text-black font-bold text-base lg:text-xl">
                 {formatPrice(price, offers!.priceCurrency!)}
               </div>
             </div>
